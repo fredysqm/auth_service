@@ -1,0 +1,18 @@
+"""
+Django local settings for otm project.
+"""
+
+DEBUG = True
+ALLOWED_HOSTS = []
+SECRET_KEY = 'secretkey'
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'xxxxx',
+    'USER': 'xxxxxxx',
+    'PASSWORD': 'xxxxxx',
+    'HOST': 'xxxx',
+  }
+}
+
+STATIC_ROOT = '/path/to/gen/static/'
