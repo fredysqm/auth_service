@@ -60,6 +60,7 @@ desktop.ini
 # special files
 package-lock.json
 .vs/
+.vscode/
 bin/
 obj/
 Librerias/
