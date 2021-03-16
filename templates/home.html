@@ -4,11 +4,13 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-  <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+  Hola {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Cerrar sesión</a></p>
+  <p><a href="{% url 'password_change' %}">Cambiar mi contraseña</a></p>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <p>Usted no esta autenticado</p>
+  <p><a href="{% url 'login' %}">Iniciar sesión</a></p>
+  <p><a href="{% url 'password_reset' %}">Olvidé mi contraseña</a></p>
+  <p><a href="{% url 'signup' %}">Nuevo usuario</a></p>
 {% endif %}
 {% endblock %}

@@ -74,7 +74,7 @@ EMAIL_FILE_PATH = '/tmp'
 if DEBUG:
   INTERNAL_IPS = ('127.0.0.1',)
   INSTALLED_APPS += ['debug_toolbar',]
-  SLEEP_TIME = 1
+  SLEEP_TIME = 0
   MIDDLEWARE += [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'app.middlewares.SleepMiddleware',
