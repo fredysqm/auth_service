@@ -11,8 +11,8 @@ ROOT_URLCONF = 'main.urls'
 WSGI_APPLICATION = 'main.wsgi.application'
 
 STATIC_URL = '/static/'
-LOGIN_URL = '/auth/login'
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
   'django.contrib.admin',
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
   #3rd
   #'rest_framework',
   #me
+  'accounts',
   'app',
 ]
 
@@ -40,6 +41,7 @@ MIDDLEWARE = [
 LANGUAGE_CODE = 'es-PE'
 USE_I18N = True
 USE_L10N = False
+USE_TZ = True
 TIME_ZONE = 'America/Lima'
 DATETIME_FORMAT = 'd/m/Y H:i'
 
@@ -64,6 +66,9 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = '/tmp'
 
 #Custom
 if DEBUG:
