@@ -10,6 +10,7 @@ distro==1.4.0
 Django==3.1.6
 django-appconf==1.0.4
 django-compressor==2.4
+django-cors-headers==3.7.0
 django-debug-toolbar==3.2
 django-oidc-provider==0.7.0
 djangorestframework==3.12.2

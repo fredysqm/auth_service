@@ -16,19 +16,20 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib import admin
 from django.conf import settings
+from django.conf.urls import url
 
 
 urlpatterns = [
   path('admin/', admin.site.urls ),
   path('accounts/', include('accounts.urls')),
   path('accounts/', include('django.contrib.auth.urls')),
+  url(r'^openid/', include('oidc_provider.urls', namespace='oidc_provider')),
   path('', include('app.urls') ),
 ]
 #handler404 = error404.as_view()
 #handler500 = error500.as_view()
 
 if settings.DEBUG:
-  from django.conf.urls import url
   import debug_toolbar
   urlpatterns = [
       url(r'^__debug__/', include(debug_toolbar.urls)),
